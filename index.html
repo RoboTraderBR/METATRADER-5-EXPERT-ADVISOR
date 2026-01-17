@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scalper 72x9 - Domine o Mercado com MetaTrader 5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #0ea5e9, #6366f1);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(14, 165, 233, 0.5);
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Header/Navigation -->
+    <nav class="fixed w-full z-50 glass-card py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i data-lucide="trending-up" class="text-sky-400 w-8 h-8"></i>
+                <span class="text-xl font-extrabold tracking-tight">SCALPER <span class="text-sky-400">72x9</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#recursos" class="hover:text-sky-400 transition">Recursos</a>
+                <a href="#como-funciona" class="hover:text-sky-400 transition">Como Funciona</a>
+                <a href="#depoimentos" class="hover:text-sky-400 transition">Depoimentos</a>
+            </div>
+            <a href="https://mpago.li/2jZbznd" class="btn-primary px-6 py-2 rounded-full text-sm font-bold">ADQUIRIR AGORA</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 flex items-center justify-center overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-20 pointer-events-none">
+            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-sky-500 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-indigo-500 rounded-full blur-[120px]"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <div class="inline-flex items-center space-x-2 bg-sky-500/10 border border-sky-500/20 px-4 py-1.5 rounded-full mb-8">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
+                </span>
+                <span class="text-sky-400 text-xs font-bold uppercase tracking-wider">Novo Lançamento 2026</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+                Automatize Seus Ganhos com o <br>
+                <span class="gradient-text italic pr-12 pb-2 inline-block -mr-12">Scalper 72x9</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10">
+                O robô de alta frequência mais avançado para MetaTrader 5. Tecnologia de ponta para quem busca consistência e precisão no mercado financeiro.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="https://mpago.li/2jZbznd" class="btn-primary px-10 py-4 rounded-xl text-lg font-bold w-full sm:w-auto flex items-center justify-center space-x-2">
+                    <span>QUERO O SCALPER 72x9 AGORA</span>
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <a href="#como-funciona" class="glass-card px-10 py-4 rounded-xl text-lg font-bold w-full sm:w-auto hover:bg-white/5 transition">
+                    Ver Como Funciona
+                </a>
+            </div>
+
+            <div class="mt-16 relative mx-auto max-w-4xl floating">
+                <div class="absolute -inset-1 bg-gradient-to-r from-sky-500 to-indigo-500 rounded-2xl blur opacity-25"></div>
+                <div class="relative glass-card rounded-2xl p-2 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=1200" alt="MT5 Trading Interface" class="rounded-xl w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 border-y border-slate-800 bg-slate-900/50">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white mb-1">92%</div>
+                    <div class="text-sm text-slate-500 uppercase tracking-widest">Taxa de Acerto</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white mb-1">24/5</div>
+                    <div class="text-sm text-slate-500 uppercase tracking-widest">Monitoramento</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white mb-1">MT5</div>
+                    <div class="text-sm text-slate-500 uppercase tracking-widest">Plataforma</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white mb-1">72x9</div>
+                    <div class="text-sm text-slate-500 uppercase tracking-widest">Algoritmo Único</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="recursos" class="py-24">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-16">Por que o <span class="text-sky-400">Scalper 72x9</span>?</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-3xl text-left hover:border-sky-500/50 transition group">
+                    <div class="w-12 h-12 bg-sky-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i data-lucide="zap" class="text-sky-400 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Alta Velocidade</h3>
+                    <p class="text-slate-400 leading-relaxed">Execução ultrarrápida de ordens, capturando micro-movimentos do mercado antes da concorrência.</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-3xl text-left hover:border-sky-500/50 transition group">
+                    <div class="w-12 h-12 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i data-lucide="shield-check" class="text-indigo-400 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Gestão de Risco</h3>
+                    <p class="text-slate-400 leading-relaxed">Algoritmos inteligentes de Stop Loss e Take Profit automáticos para proteger seu capital 24 horas por dia.</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-3xl text-left hover:border-sky-500/50 transition group">
+                    <div class="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i data-lucide="settings" class="text-emerald-400 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">100% Automático</h3>
+                    <p class="text-slate-400 leading-relaxed">Basta configurar uma única vez. O robô faz todo o trabalho pesado de análise e operação para você.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section id="como-funciona" class="py-24 bg-slate-900/30">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-8 leading-tight">Simplicidade <br> que Gera Resultados</h2>
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-full bg-sky-500 flex items-center justify-center flex-shrink-0 font-bold">1</div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">Instale no MT5</h4>
+                                <p class="text-slate-400">Receba o arquivo e o manual completo. A instalação leva menos de 5 minutos.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-full bg-sky-500 flex items-center justify-center flex-shrink-0 font-bold">2</div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">Configure o Lote</h4>
+                                <p class="text-slate-400">Defina o nível de risco que deseja assumir de acordo com sua banca.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-full bg-sky-500 flex items-center justify-center flex-shrink-0 font-bold">3</div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">Ative o Robô</h4>
+                                <p class="text-slate-400">Clique em "AutoTrading" e deixe o Scalper 72x9 buscar as melhores oportunidades.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 relative">
+                    <div class="absolute -inset-4 bg-sky-500/10 rounded-full blur-3xl"></div>
+                    <img src="https://images.unsplash.com/photo-1642790106117-e829e14a795f?auto=format&fit=crop&q=80&w=800" alt="Dashboard Analysis" class="relative rounded-3xl shadow-2xl border border-slate-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="depoimentos" class="py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center">O que dizem nossos <span class="text-sky-400">Traders</span></h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="glass-card p-8 rounded-3xl relative">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150&h=150" alt="Trader" class="w-14 h-14 rounded-full border-2 border-sky-500">
+                        <div>
+                            <h4 class="font-bold">Ricardo Santos</h4>
+                            <div class="flex text-yellow-500 text-xs">
+                                <i data-lucide="star" class="fill-current w-3 h-3"></i>
+                                <i data-lucide="star" class="fill-current w-3 h-3"></i>
+                                <i data-lucide="star" class="fill-current w-3 h-3"></i>
+                                <i data-lucide="star" class="fill-current w-3 h-3"></i>
+                                <i data-lucide="star" class="fill-current w-3 h-3"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 italic">"O Scalper 72x9 mudou completamente minha rotina. Antes eu ficava horas na frente do PC, agora deixo o robô rodando e os resultados são muito mais consistentes."</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="glass-card p-8 rounded-3xl relative">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150" alt="Trader" class="w-14 h-14 rounded-full border-2 border-indigo-500">
+                        <div>
+                            <h4 class="font-bold">Ana Oliveira</h4>
+                            <div class="flex text-yellow-500 text-xs">
+                                <i data-lucide="star" class="fill-current w-3 h-3"></i>
+                                <i data-lucide="star" class="fill-current w-3 h-3"></i>
+                                <i data-lucide="star" class="fill-current w-3 h-3"></i>
+                                <i data-lucide="star" class="fill-current w-3 h-3"></i>
+                                <i data-lucide="star" class="fill-current w-3 h-3"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 italic">"A facilidade de configuração me impressionou. Em menos de 10 minutos já estava operando. O suporte também é excelente e tirou todas as minhas dúvidas."</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="glass-card p-8 rounded-3xl relative">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150&h=150" alt="Trader" class="w-14 h-14 rounded-full border-2 border-emerald-500">
+                        <div>
+                            <h4 class="font-bold">Marcos Vinícius</h4>
+                            <div class="flex text-yellow-500 text-xs">
+                                <i data-lucide="star" class="fill-current w-3 h-3"></i>
+                                <i data-lucide="star" class="fill-current w-3 h-3"></i>
+                                <i data-lucide="star" class="fill-current w-3 h-3"></i>
+                                <i data-lucide="star" class="fill-current w-3 h-3"></i>
+                                <i data-lucide="star" class="fill-current w-3 h-3"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 italic">"Estava cético com robôs de scalper, mas o 72x9 provou ser diferente. A gestão de risco é muito inteligente e protege bem o capital nas oscilações."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="glass-card rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-sky-500/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+                <div class="absolute bottom-0 left-0 w-64 h-64 bg-indigo-500/10 rounded-full -ml-32 -mb-32 blur-3xl"></div>
+                
+                <h2 class="text-4xl md:text-6xl font-extrabold mb-8 leading-tight">Pronto para Mudar <br> Seu Nível de Trading?</h2>
+                <p class="text-xl text-slate-400 mb-12 max-w-2xl mx-auto">
+                    Acesso vitalício ao Scalper 72x9 + Suporte VIP + Manual de Configuração.
+                </p>
+                
+                <div class="flex flex-col items-center">
+                    <a href="https://mpago.li/2jZbznd" class="btn-primary px-12 py-5 rounded-2xl text-xl font-extrabold w-full md:w-auto shadow-xl hover:scale-105 transition">
+                        ADQUIRIR AGORA VIA MERCADO PAGO
+                    </a>
+                    <div class="mt-8 flex items-center space-x-4 text-slate-500 grayscale opacity-70">
+                        <img src="https://logodownload.org/wp-content/uploads/2019/06/mercado-pago-logo-1.png" alt="Mercado Pago" class="h-6">
+                        <span>Pagamento 100% Seguro</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-800">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+            <div class="flex items-center space-x-2">
+                <i data-lucide="trending-up" class="text-sky-400 w-6 h-6"></i>
+                <span class="text-lg font-bold">SCALPER 72x9</span>
+            </div>
+            <p class="text-slate-500 text-sm">© 2026 Todos os direitos reservados. Investimentos envolvem risco.</p>
+            <div class="flex space-x-6">
+                <a href="#" class="text-slate-400 hover:text-white transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                <a href="#" class="text-slate-400 hover:text-white transition"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+                <a href="#" class="text-slate-400 hover:text-white transition"><i data-lucide="send" class="w-5 h-5"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
